@@ -1,7 +1,8 @@
-Evaluation platform for the KubeScale hybrid auto-scaler
+Evaluation platform for auto-scalers
 =====================
 
-- [Auto-scaler evaluation platform](#high-level)
+Contents:
+- [Introduction to the auto-scaler evaluation platform](#high-level)
 - [Repository contents](#contents)
 - [Platform setup and installation](#setup)
 - [Running experiments](#exp-setup)
@@ -9,10 +10,7 @@ Evaluation platform for the KubeScale hybrid auto-scaler
 Auto-scaler evaluation platform <a name="high-level"></a>
 ------------------
 
-As part of the KubeScale auto-scaler development, a platform for evaluation of auto-scalers was created:
-
-![High level architecture](Architecture-High-level.png)
-
+This platform for evaluating auto-scalers was created during the development of KubeScale auto-scaler.
 The platform presents a perfect testing ground for auto-scaler since it provides:
 - workload generation based on templates executed by Gatling
 - a web application with minimal start-up overhead based on the flask framework  
@@ -20,10 +18,16 @@ The platform presents a perfect testing ground for auto-scaler since it provides
 - advanced monitoring using Prometheus, kube-eagle
 - easy visualisation of metrics using Grafana 
 
+
+A high level architecture of the platform is the following:
+![High level architecture](Architecture-High-level.png)
+
+
 Any auto-scaler can thus easily integrate by:
-- changing the workloads to those that test the auto-scaler
-- using the existing endpoints for CPU intensive work on the application
-- reading metrics from the Prometheus database
+- changing the Gatling workloads to those that test the auto-scaler
+- using the existing web-application for CPU intensive work
+- using the Prometheus monitoring system for storing and reading metrics 
+- using the Envoy load balancer for easier scaling, web traffic metrics and advanced load balancing
 - ...
 
 Repository contents <a name="contents"></a>

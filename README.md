@@ -1,9 +1,15 @@
 Evaluation platform for the KubeScale hybrid auto-scaler
 =====================
 
-Auto-scaler evaluation platform
+- [Auto-scaler evaluation platform](#high-level)
+- [Repository contents](#contents)
+- [Platform setup and installation](#setup)
+- [Running experiments](#exp-setup)
+
+Auto-scaler evaluation platform <a name="high-level"></a>
 ------------------
-As part of the KubeScale development, a platform for evaluation of auto-scalers was created:
+
+As part of the KubeScale auto-scaler development, a platform for evaluation of auto-scalers was created:
 
 ![High level architecture](Architecture-High-level.png)
 
@@ -19,6 +25,9 @@ Any auto-scaler can thus easily integrate by:
 - using the existing endpoints for CPU intensive work on the application
 - reading metrics from the Prometheus database
 - ...
+
+Repository contents <a name="contents"></a>
+------------------
 
 This repository contains the following folders:
 - [helm](helm)
@@ -60,10 +69,10 @@ and the following scripts:
     - script for running experiments that test auto-scalers using workloads, applications and monitoring metrics on the evaluation platform
     
 
-Initial setup
+Platform setup and installation <a name="setup"></a>
 ------------------ 
 
-1) Setup a Kubernetes cluster (the repository contains the instructions on how to do this using KubeSpray).
+1) Setup a Kubernetes cluster (the repository contains the instructions on how to do this using KubeSpray inside [kubespray-setup](kubespray-setup)).
 
 2) Install kubectl and create a namespace in your Kubernetes cluster
 The Kubernetes cluster creation document [here](./_initial_kubespray_setup/setup_instructions.md) contains the instructions to setup kubectl after the KubeSpray cluster instalation. 
@@ -96,7 +105,7 @@ The Kubernetes cluster creation document [here](./_initial_kubespray_setup/setup
         helm init --upgrade
         ```
 
-Experiment setup
+Experiment setup <a name="exp-setup"></a>
 --------------------------------
 
 First read through and then run the setup.sh script with the relevant Kubernetes namespace name:

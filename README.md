@@ -16,11 +16,11 @@ The platform presents a perfect testing ground for auto-scaler since it provides
 - a web application with minimal start-up overhead based on the flask framework  
 - load balancing and related HTTP traffic metrics (used by most cloud auto-scalers) such as RPS, latency... using Envoy
 - advanced monitoring using Prometheus, kube-eagle
-- easy visualisation of metrics using Grafana 
+- easy visualisation of relevant performance metrics using Grafana templae
 
 
 A high level architecture of the platform is the following:
-![High level architecture](Architecture-High-level.png)
+![High level architecture](img/Architecture-High-level.png)
 
 
 Any auto-scaler can thus easily integrate by:
@@ -29,6 +29,9 @@ Any auto-scaler can thus easily integrate by:
 - using the Prometheus monitoring system for storing and reading metrics 
 - using the Envoy load balancer for easier scaling, web traffic metrics and advanced load balancing
 - ...
+
+Example of a JSON templated Grafana dashboard and metrics captured and presented using the framework: 
+![GRafna](img/Example-Grafana-Dashboard.jpg)
 
 Repository contents <a name="contents"></a>
 ------------------

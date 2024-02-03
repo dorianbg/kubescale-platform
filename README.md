@@ -1,4 +1,4 @@
-Evaluation platform for auto-scalers
+KubeScale platform: Evaluation platform for auto-scalers
 =====================
 
 Contents:
@@ -30,8 +30,11 @@ Any auto-scaler can thus easily integrate by:
 - using the Envoy load balancer for easier scaling, web traffic metrics and advanced load balancing
 - ...
 
-Example of a JSON templated Grafana dashboard and metrics captured and presented using the framework: 
-![GRafna](img/Example-Grafana-Dashboard.jpg)
+
+Example of auto-scalers in action shown through metrics produced 
+
+JSON templated Grafana dashboard and metrics captured and presented using the framework: 
+![Grafana](img/Example-Grafana-Dashboard.jpg)
 
 Repository contents <a name="contents"></a>
 ------------------
